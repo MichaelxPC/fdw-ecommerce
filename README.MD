@@ -1,5 +1,5 @@
 Descripción
-Este proyecto de fundamentos web implementa una tienda online básica utilizando tecnologías como HTML, CSS (con Tailwind CSS), JavaScript y herramientas de desarrollo como Prettier. El proyecto simula la funcionalidad de un ecommerce, permitiendo a los usuarios navegar por diferentes categorías de productos, visualizar detalles de productos individuales y agregarlos a un carrito de compras.
+Este proyecto de fundamentos web implementa una tienda online básica utilizando tecnologías como HTML, CSS (con Tailwind CSS), JavaScript y herramientas de desarrollo como Prettier. El proyecto simula la funcionalidad de un ecommerce, permitiendo a los usuarios navegar por diferentes categorías de productos, visualizar detalles de productos individuales.
 
 Tecnologías Utilizadas
 Front-end:

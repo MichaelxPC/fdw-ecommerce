@@ -65,7 +65,21 @@ li:hover {
   }
 }
 
+/* Principal container */
+
 .container {
   height: 100%;
   width: 98%;
+}
+
+/* Filtros */
+
+.filtros {
+  height: 24rem;
+  width: 22rem;
+}
+
+.paginacion {
+  height: 4rem;
+  width: 32rem;
 }

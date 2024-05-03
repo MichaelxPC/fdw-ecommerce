@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="../css/output.css" />
+    <link rel="stylesheet" href="../output.css" />
     <link rel="stylesheet" href="../css/style.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
       class="base-home h-screen w-full flex flex-col bg-principal-bg"
     >
       <section class="flex justify-center items-center w-full bg-white h-16">
-        <h1 class="text-6xl font-semibold">Products</h1>
+        <h1>Productos</h1>
       </section>
       <!-- NavBar Aside -->
       <nav
@@ -60,8 +60,7 @@
                   d="M12.71 2.29a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42A1 1 0 0 0 3 13h1v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7h1a1 1 0 0 0 1-1 1 1 0 0 0-.29-.71zM6 20v-9.59l6-6 6 6V20z"
                 ></path>
               </svg>
-              ></a
-            >
+            </a>
 
             <span
               class="nav-items close-text text-3xl text-text-color font-medium"
@@ -127,7 +126,99 @@
           </li> -->
         </ul>
       </nav>
-      <section class="container"></section>
+      <section class="container flex flex-col items-center">
+        <div class="h-fit">
+          <div class="flex justify-center bg-primary-blue rounded-2xl">
+            <h3 class="font-bold text-white text-4xl p-4">Buscar productos</h3>
+          </div>
+          <input
+            type="text"
+            class="searchProducts mt-4"
+            placeholder="Computador, pantalla"
+          />
+        </div>
+        <section
+          class="p-4 flex flex-col items-center gap-4 mb:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+        >
+          <!-- Tarjetas -->
+          <div
+            class="h-96 w-96 bg-white border-2 border-ligh-gray flex flex-col"
+          >
+            <div class="h-12 w-48 flex justify-center items-center self-center">
+              <span class="font-bold text-2xl truncate">Radeon 4700</span>
+            </div>
+            <div
+              class="h-fit w-full flex justify-center items-center border-b-2 border-ligh-gray"
+            >
+              <img
+                src="https://www.janus.com.co/cdn/shop/files/AX6monitor22tradicional_cb6899fd-7066-4b8b-b6ec-df1baf04fb71.jpg?v=1704986469"
+                alt="monitor"
+                class="h-72 w-full object-cover"
+              />
+            </div>
+            <div class="flex justify-between items-center ml-8">
+              <div class="bg-primary-blue p-2 rounded-lg">
+                <span class="text-white justify-self-end font-semibold"
+                  >Categoria</span
+                >
+              </div>
+              <div class="mr-4">
+                <span class="font-bold text-xl justify-self-end text-green-500"
+                  >Precio: $1.00</span
+                >
+              </div>
+            </div>
+            <div class="ml-8">
+              <span class="font-bold text-xl mt-2">Codigo: ADIJWADJA</span>
+            </div>
+          </div>
+        </section>
+        <!-- Filtro -->
+        <aside
+          class="filtros fixed flex flex-col items-center top-60 right-0 bg-white z-30 rounded-2xl border-2 border-ligh-gray"
+        >
+          <span class="font-semibold text-5xl text-primary-blue">Filtrar</span>
+          <div
+            class="flex flex-col items-center h-fit w-full mt-4 border-y-2 border-ligh-gray"
+          >
+            <span class="text-3xl mr-2 ml-2 font-semibold text-text-color"
+              >Precio:</span
+            >
+            <select name="" id="" class="inputFilter">
+              <option value="value1" class="font-semibold">(Barra)</option>
+            </select>
+          </div>
+          <div
+            class="flex flex-col items-center h-fit w-full mt-4 border-b-2 border-ligh-gray"
+          >
+            <span class="text-3xl mr-2 ml-2 font-semibold text-text-color"
+              >Categoria:</span
+            >
+            <select name="" id="" class="inputFilter">
+              <option value="value1" class="font-semibold">Temporal</option>
+            </select>
+          </div>
+        </aside>
+        <section
+          class="paginacion fixed bottom-0 flex justify-between items-center bg-white border-2 border-ligh-gray rounded-xl p-4"
+        >
+          <div
+            class="bg-white rounded-full w-14 h-14 flex justify-center items-center cursor-pointer border-2 border-primary-blue"
+          >
+            <span class="text-2xl font-bold text-text-color">1</span>
+          </div>
+          <div
+            class="bg-white rounded-full w-14 h-14 flex justify-center items-center cursor-pointer border-2 border-primary-blue"
+          >
+            <span class="text-2xl font-bold text-text-color">2</span>
+          </div>
+          <div
+            class="bg-white rounded-full w-14 h-14 flex justify-center items-center cursor-pointer border-2 border-primary-blue"
+          >
+            <span class="text-2xl font-bold text-text-color">3</span>
+          </div>
+        </section>
+      </section>
     </main>
     <script src="../js/main.js"></script>
   </body>
