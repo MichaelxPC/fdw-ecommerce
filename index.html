@@ -8,9 +8,12 @@
     <title>Document</title>
   </head>
   <body>
-    <main>
+    <main
+      id="main-container"
+      class="base-home h-screen w-full flex flex-col bg-principal-bg"
+    >
       <section class="flex justify-center items-center w-full bg-white h-16">
-        <h1>Productos</h1>
+        <h1 class="text-5xl font-bold text-primary-blue">Manual de usuario</h1>
       </section>
       <!-- NavBar Aside -->
       <nav
@@ -45,7 +48,7 @@
           <li
             class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue"
           >
-            <a href=""
+            <a href="./index.html"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -67,7 +70,10 @@
           <li
             class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue hover:border-2 hover:border-ligh-gray"
           >
-            <a href="./registrarProducto.html" class="flex items-center">
+            <a
+              href="./src/views/registrarProducto.html"
+              class="flex items-center"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-14 w-14 navbar-icons"
@@ -91,7 +97,7 @@
           <li
             class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue"
           >
-            <a href="./producto.html" class="flex items-center">
+            <a href="./src/views/producto.html" class="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -123,6 +129,45 @@
           </li> -->
         </ul>
       </nav>
+      <section class="flex flex-col justify-center">
+        <article class="container-indicaciones">
+          <span class="text-4xl font-semibold text-primary-blue"
+            >¿Como registrar un producto?</span
+          >
+          <div class="flex">
+            <span class="text-2xl font-medium">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+              qui explicabo perspiciatis eius cumque voluptate id blanditiis
+              hic, officia, impedit eos nesciunt minima beatae aliquam corporis
+              totam ex amet vel? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Sequi omnis ipsam voluptatum molestiae nobis
+              necessitatibus minima placeat incidunt facere quod! Suscipit
+              perferendis atque libero repellendus harum vitae sapiente
+              quibusdam. Saepe!
+            </span>
+            <img src="./src/imgs/ImagenUnoInd.png" alt="image" class="" />
+          </div>
+        </article>
+        <article class="container-indicaciones">
+          <span class="text-4xl font-semibold text-primary-blue"
+            >¿Como ver los productos?</span
+          >
+          <div class="flex">
+            <span class="text-2xl font-medium">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
+              qui explicabo perspiciatis eius cumque voluptate id blanditiis
+              hic, officia, impedit eos nesciunt minima beatae aliquam corporis
+              totam ex amet vel? Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Sequi omnis ipsam voluptatum molestiae nobis
+              necessitatibus minima placeat incidunt facere quod! Suscipit
+              perferendis atque libero repellendus harum vitae sapiente
+              quibusdam. Saepe!
+            </span>
+            <img src="./src/imgs/ImagenUnoInd.png" alt="image" class="" />
+          </div>
+        </article>
+      </section>
     </main>
+    <script src="./src/js/main.js"></script>
   </body>
 </html>

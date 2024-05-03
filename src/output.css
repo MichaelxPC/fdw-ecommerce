@@ -660,6 +660,10 @@ video {
   right: -2.75rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -678,10 +682,6 @@ video {
 
 .top-60 {
   top: 15rem;
-}
-
-.bottom-0 {
-  bottom: 0px;
 }
 
 .z-30 {
@@ -769,10 +769,6 @@ video {
   height: 100vh;
 }
 
-.h-8 {
-  height: 2rem;
-}
-
 .w-0 {
   width: 0px;
 }
@@ -801,14 +797,6 @@ video {
   width: 100%;
 }
 
-.w-8 {
-  width: 2rem;
-}
-
-.w-28 {
-  width: 7rem;
-}
-
 .cursor-pointer {
   cursor: pointer;
 }
@@ -835,10 +823,6 @@ video {
 
 .gap-4 {
   gap: 1rem;
-}
-
-.self-end {
-  align-self: flex-end;
 }
 
 .self-center {
@@ -949,11 +933,6 @@ video {
 
 .text-xl {
   font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.text-lg {
-  font-size: 1.125rem;
   line-height: 1.75rem;
 }
 

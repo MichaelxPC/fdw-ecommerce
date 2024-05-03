@@ -83,3 +83,22 @@ li:hover {
   height: 4rem;
   width: 32rem;
 }
+
+/* Indicacione */
+
+.container-indicaciones {
+  height: 32rem;
+  width: 120rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+
+.container-indicaciones div span {
+  height: 10rem;
+  width: 50rem;
+}
+
+.container-indicaciones div img {
+  height: 22rem;
+  width: 32rem;
+}
