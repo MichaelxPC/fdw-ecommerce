@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="../css/output.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main
+      id="main-container"
+      class="base-home h-screen w-full flex flex-col bg-principal-bg"
+    >
+      <section class="flex justify-center items-center w-full bg-white h-16">
+        <h1 class="text-6xl font-semibold">Products</h1>
+      </section>
+      <!-- NavBar Aside -->
+      <nav
+        id="nav-bar"
+        class="nav-side close fixed flex flex-col top-0 left-0 bg-white z-30"
+      >
+        <div class="flex h-32 justify-center items-center">
+          <div
+            class="icon-page bg-primary-blue h-full w-full flex items-center justify-center rounded-lg"
+          >
+            <span class="text-white font-bold text-6xl">TI</span>
+          </div>
+          <div class="icon-text flex justify-center items-center w-0 h-32">
+            <span
+              class="close-text nav-items text-6xl text-text-color font-bold mr-14"
+              >Tech Inc.</span
+            >
+          </div>
+        </div>
+        <div
+          id="switch-navbar"
+          class="bg-primary-blue rounded-full w-20 h-20 flex justify-center absolute top-1/2 -right-11 cursor-pointer"
+        >
+          <img
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAI9JREFUSEvVlF0OgCAMg+lN9STqTbzpDAkafkYGpJjA8+i3tQO4yQeT9d1aABER7wiAr3HqBOsDtIWhWkQDiMgB4MoFaRkEoTOHsAF+gATSDHgLG195MUl8Tw25E7ADuGvNDG1R1EAi3myRZU0QKjpnAjbNFhrAmtAMuUfAqh0KuSY63aL1AbTf1Ar21y16AMajVhmts4Z5AAAAAElFTkSuQmCC"
+            class="h-20 w-16"
+          />
+        </div>
+
+        <!--  NavBar Items -->
+        <ul class="flex flex-col">
+          <li
+            class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue"
+          >
+            <a href=""
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                class="h-14 w-14 navbar-icons"
+              >
+                <path
+                  d="M12.71 2.29a1 1 0 0 0-1.42 0l-9 9a1 1 0 0 0 0 1.42A1 1 0 0 0 3 13h1v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7h1a1 1 0 0 0 1-1 1 1 0 0 0-.29-.71zM6 20v-9.59l6-6 6 6V20z"
+                ></path>
+              </svg>
+              ></a
+            >
+
+            <span
+              class="nav-items close-text text-3xl text-text-color font-medium"
+              >Home</span
+            >
+          </li>
+          <li
+            class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue hover:border-2 hover:border-ligh-gray"
+          >
+            <a href="./registrarProducto.html" class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-14 w-14 navbar-icons"
+                viewBox="0 0 24 24"
+              >
+                <circle cx="10.5" cy="19.5" r="1.5"></circle>
+                <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                <path
+                  d="M13 13h2v-2.99h2.99v-2H15V5.03h-2v2.98h-2.99v2H13V13z"
+                ></path>
+                <path
+                  d="M10 17h8a1 1 0 0 0 .93-.64L21.76 9h-2.14l-2.31 6h-6.64L6.18 4.23A2 2 0 0 0 4.33 3H2v2h2.33l4.75 11.38A1 1 0 0 0 10 17z"
+                ></path>
+              </svg>
+              <span
+                class="nav-items close-text text-3xl text-text-color font-medium"
+                >Create Product</span
+              >
+            </a>
+          </li>
+          <li
+            class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue"
+          >
+            <a href="./producto.html" class="flex items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                class="h-14 w-14 navbar-icons"
+              >
+                <circle cx="10.5" cy="19.5" r="1.5"></circle>
+                <circle cx="17.5" cy="19.5" r="1.5"></circle>
+                <path d="m14 13.99 4-5h-3v-4h-2v4h-3l4 5z"></path>
+                <path
+                  d="M17.31 15h-6.64L6.18 4.23A2 2 0 0 0 4.33 3H2v2h2.33l4.75 11.38A1 1 0 0 0 10 17h8a1 1 0 0 0 .93-.64L21.76 9h-2.14z"
+                ></path>
+              </svg>
+              <span
+                class="nav-items close-text text-3xl text-text-color font-medium"
+                >Products</span
+              >
+            </a>
+          </li>
+
+          <!-- User Section -->
+          <!-- <li
+            class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray hover:bg-black"
+          >
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUdJREFUSEvVVcFxwjAQvIMCsDuATqCLDOIBX5jBoQJIBcTMwBceEUMX0EnowKaAcBmYyBHKnWzG9iP+yqe93ds9IdT8Yc33w/8B6MfJHAEXRhEdBffmK2EwWCZdauDRlvspABWndCs2Re7c1Co9AkGXkEb7abizzwsxyAX4aeDrSp3DLDxXCqDeL1tAGgLhTr+2Ri47kYHpWrKxkUvF6ScAtPFKvY9ZeBIB3E6KAPRXyRAJt4Bw0tOgxzWTMXhZJu1mA2/dnHUUdOyfpRn4hmvqHyQyBS5dDsC2puSuPzmQKHMAecNlGVgygTQ0U2hAOWt6bZrpCrTYR+EbN7iMqWBNLwAXe8mqeSzFXeQuLhbAY82nk1zmzWCTrOLLGoDGALjRUWvymAn5zBs0LljcBrUT7vM/a9NfC9bMoIzmhbdpVSCFHpwyYN8vp8YZ1pIxXgAAAABJRU5ErkJggg=="
+              class="h-14 w-14"
+            />
+            <span class="text-3xl text-text-color font-medium">Products</span>
+          </li> -->
+        </ul>
+      </nav>
+      <section class="container"></section>
+    </main>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
