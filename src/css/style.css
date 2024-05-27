@@ -74,6 +74,13 @@ li:hover {
 
 /* Filtros */
 
+.product-container {
+  width: 92%;
+}
+
+.product-card {
+  height: 40rem;
+}
 .filtros {
   height: 24rem;
   width: 22rem;
@@ -84,7 +91,7 @@ li:hover {
   width: 32rem;
 }
 
-/* Indicacione */
+/* Indicaciones */
 
 .container-indicaciones {
   height: 32rem;
@@ -101,4 +108,54 @@ li:hover {
 .container-indicaciones div img {
   height: 22rem;
   width: 32rem;
+}
+
+/* Pagination */
+
+.items-pagination:hover {
+  background-color: #5b91f0;
+  .text-pagination {
+    color: white;
+  }
+}
+
+.loaderDiv {
+  margin-left: 12rem;
+  height: 80rem;
+  width: 25rem;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  --r1: 154%;
+  --r2: 68.5%;
+  width: 50rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+      var(--r1) var(--r2) at top,
+      #0000 79.5%,
+      #5b91f0 80%
+    ),
+    radial-gradient(var(--r1) var(--r2) at bottom, #5b91f0 79.5%, #0000 80%),
+    radial-gradient(var(--r1) var(--r2) at top, #0000 79.5%, #5b91f0 80%), #ccc;
+  background-size: 50.5% 220%;
+  background-position: -100% 0%, 0% 0%, 100% 0%;
+  background-repeat: no-repeat;
+  animation: l9 2s infinite linear;
+}
+@keyframes l9 {
+  33% {
+    background-position: 0% 33%, 100% 33%, 200% 33%;
+  }
+  66% {
+    background-position: -100% 66%, 0% 66%, 100% 66%;
+  }
+  100% {
+    background-position: 0% 100%, 100% 100%, 200% 100%;
+  }
+}
+
+.hidden {
+  display: none;
 }

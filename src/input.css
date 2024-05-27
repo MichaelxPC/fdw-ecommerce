@@ -7,7 +7,7 @@
     @apply mt-2 p-2 w-96 h-12 outline-ligh-gray font-normal text-2xl rounded-lg focus:outline-primary-blue;
   }
   .searchProducts {
-    @apply mt-2 p-2 w-full h-12 outline-ligh-gray font-normal text-2xl rounded-lg focus:outline-primary-blue;
+    @apply mt-2 p-2 w-96 h-12 outline-ligh-gray font-normal text-2xl rounded-lg focus:outline-primary-blue;
   }
   .inputFilter {
     @apply mt-2 p-2 w-48 h-12 outline-primary-blue font-normal text-2xl rounded-lg focus:outline-primary-blue;

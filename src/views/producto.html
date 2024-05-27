@@ -10,11 +10,8 @@
   <body>
     <main
       id="main-container"
-      class="base-home h-screen w-full flex flex-col bg-principal-bg"
+      class="base-home h-screen w-full flex flex-col items-center bg-principal-bg"
     >
-      <section class="flex justify-center items-center w-full bg-white h-16">
-        <h1>Productos</h1>
-      </section>
       <!-- NavBar Aside -->
       <nav
         id="nav-bar"
@@ -126,8 +123,8 @@
           </li> -->
         </ul>
       </nav>
-      <section class="container flex flex-col items-center">
-        <div class="h-fit">
+      <section id="product-main" class="product-container bg-white rounded-lg">
+        <div class="flex flex-col items-center justify-center mt-5">
           <div class="flex justify-center bg-primary-blue rounded-2xl">
             <h3 class="font-bold text-white text-4xl p-4">Buscar productos</h3>
           </div>
@@ -137,89 +134,110 @@
             placeholder="Computador, pantalla"
           />
         </div>
-        <section
-          class="p-4 flex flex-col items-center gap-4 mb:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
-        >
-          <!-- Tarjetas -->
-          <div
-            class="h-96 w-96 bg-white border-2 border-ligh-gray flex flex-col"
+        <div class="container flex flex-col items-center">
+          <div id="loaderDiv" class="flex justify-center items-center"></div>
+          <section
+            id="products-grid"
+            class="p-4 flex flex-col items-center gap-4 mb:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
           >
-            <div class="h-12 w-48 flex justify-center items-center self-center">
-              <span class="font-bold text-2xl truncate">Radeon 4700</span>
+            <!-- Tarjetas -->
+            <!-- <div
+              class="product-card w-96 bg-white border-2bg-white border-2 border-ligh-gray flex flex-col"
+            >
+              <div
+                class="h-12 w-48 flex justify-center items-center self-center"
+              >
+                <span class="font-bold text-2xl truncate">Radeon 4700</span>
+              </div>
+              <div
+                class="h-fit w-full flex justify-center items-center border-b-2 border-ligh-gray"
+              >
+                <img
+                  src="https://www.janus.com.co/cdn/shop/files/AX6monitor22tradicional_cb6899fd-7066-4b8b-b6ec-df1baf04fb71.jpg?v=1704986469"
+                  alt="monitor"
+                  class="h-72 w- object-cover"
+                />
+              </div>
+              <div class="flex justify-between items-center ml-4">
+                <div class="bg-primary-blue p-2 rounded-lg mt-2">
+                  <span
+                    class="text-white justify-self-end font-semibold text-xl"
+                    >Celular</span
+                  >
+                </div>
+                <div class="mr-4">
+                  <span
+                    class="font-bold text-xl justify-self-end text-green-500 mr-2"
+                    >$1.00</span
+                  >
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-2 ml-4 mr-4">
+                <div class="w-20 flex items-center justify-between">
+                  <span class="text-yellow-500 font-semibold text-2xl mr-2"
+                    >Feed:</span
+                  >
+                  <span class="text-yellow-500 font-semibold text-2xl">14</span>
+                </div>
+                <div class="w-20 flex items-center justify-between">
+                  <img src="../imgs/star-sm.png" alt="star.png" />
+                  <span class="text-yellow-500 font-semibold text-xl">4.2</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center mt-2 ml-4 mr-4">
+                <span class="text-green-400 font-semibold text-2xl"
+                  >Eco Friendly:
+                </span>
+                <span class="font-semibold text-xl">No</span>
+              </div>
+              <div class="flex justify-between items-center mt-2 ml-4 mr-4">
+                <span class="font-semibold text-2xl">Vendidos en el mes: </span>
+                <span class="font-semibold text-2xl">2K+</span>
+              </div>
+              <div class="flex justify-between items-center mt-2 ml-4 mr-4">
+                <span class="font-semibold text-2xl">Domicilio:</span>
+                <span class="font-semibold text-2xl text-green-500"
+                  >¡GRATIS!</span
+                >
+              </div>
+              <div class="flex justify-center items-center mt-6">
+                <span class="font-semibold text-xl mt-2"
+                  >Codigo: ADIJWADJA</span
+                >
+              </div>
+            </div> -->
+          </section>
+          <!-- Filtro -->
+          <aside
+            class="filtros fixed flex flex-col items-center top-60 right-0 bg-white z-30 rounded-2xl border-2 border-ligh-gray"
+          >
+            <span class="font-semibold text-5xl text-primary-blue"
+              >Filtrar</span
+            >
+            <div
+              class="flex flex-col items-center h-fit w-full mt-4 border-y-2 border-ligh-gray"
+            >
+              <span class="text-3xl mr-2 ml-2 font-semibold text-text-color"
+                >Precio:</span
+              >
+              <select name="" id="" class="inputFilter">
+                <option value="value1" class="font-semibold">(Barra)</option>
+              </select>
             </div>
             <div
-              class="h-fit w-full flex justify-center items-center border-b-2 border-ligh-gray"
+              class="flex flex-col items-center h-fit w-full mt-4 border-b-2 border-ligh-gray"
             >
-              <img
-                src="https://www.janus.com.co/cdn/shop/files/AX6monitor22tradicional_cb6899fd-7066-4b8b-b6ec-df1baf04fb71.jpg?v=1704986469"
-                alt="monitor"
-                class="h-72 w-full object-cover"
-              />
+              <span class="text-3xl mr-2 ml-2 font-semibold text-text-color"
+                >Categoria:</span
+              >
+              <select name="" id="" class="inputFilter">
+                <option value="value1" class="font-semibold">Temporal</option>
+              </select>
             </div>
-            <div class="flex justify-between items-center ml-8">
-              <div class="bg-primary-blue p-2 rounded-lg">
-                <span class="text-white justify-self-end font-semibold"
-                  >Categoria</span
-                >
-              </div>
-              <div class="mr-4">
-                <span class="font-bold text-xl justify-self-end text-green-500"
-                  >Precio: $1.00</span
-                >
-              </div>
-            </div>
-            <div class="ml-8">
-              <span class="font-bold text-xl mt-2">Codigo: ADIJWADJA</span>
-            </div>
-          </div>
-        </section>
-        <!-- Filtro -->
-        <aside
-          class="filtros fixed flex flex-col items-center top-60 right-0 bg-white z-30 rounded-2xl border-2 border-ligh-gray"
-        >
-          <span class="font-semibold text-5xl text-primary-blue">Filtrar</span>
-          <div
-            class="flex flex-col items-center h-fit w-full mt-4 border-y-2 border-ligh-gray"
-          >
-            <span class="text-3xl mr-2 ml-2 font-semibold text-text-color"
-              >Precio:</span
-            >
-            <select name="" id="" class="inputFilter">
-              <option value="value1" class="font-semibold">(Barra)</option>
-            </select>
-          </div>
-          <div
-            class="flex flex-col items-center h-fit w-full mt-4 border-b-2 border-ligh-gray"
-          >
-            <span class="text-3xl mr-2 ml-2 font-semibold text-text-color"
-              >Categoria:</span
-            >
-            <select name="" id="" class="inputFilter">
-              <option value="value1" class="font-semibold">Temporal</option>
-            </select>
-          </div>
-        </aside>
-        <section
-          class="paginacion fixed bottom-0 flex justify-between items-center bg-white border-2 border-ligh-gray rounded-xl p-4"
-        >
-          <div
-            class="bg-white rounded-full w-14 h-14 flex justify-center items-center cursor-pointer border-2 border-primary-blue"
-          >
-            <span class="text-2xl font-bold text-text-color">1</span>
-          </div>
-          <div
-            class="bg-white rounded-full w-14 h-14 flex justify-center items-center cursor-pointer border-2 border-primary-blue"
-          >
-            <span class="text-2xl font-bold text-text-color">2</span>
-          </div>
-          <div
-            class="bg-white rounded-full w-14 h-14 flex justify-center items-center cursor-pointer border-2 border-primary-blue"
-          >
-            <span class="text-2xl font-bold text-text-color">3</span>
-          </div>
-        </section>
+          </aside>
+        </div>
       </section>
     </main>
-    <script src="../js/main.js"></script>
+    <script type="module" src="../js/producto.mjs"></script>
   </body>
 </html>
