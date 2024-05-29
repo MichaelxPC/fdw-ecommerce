@@ -9,14 +9,13 @@
   </head>
   <body>
     <header></header>
-    <main
-      id="main-container"
-      class="base-home h-screen w-full flex flex-col bg-principal-bg"
-    >
-      <section class="flex justify-center items-center w-full bg-white h-16">
-        <h1 class="text-primary-blue text-6xl font-semibold">
-          Registrar producto
-        </h1>
+    <main id="main-container" class="base-home h-screen w-full flex flex-col">
+      <section class="flex justify-center items-center w-full bg-white h-24">
+        <div class="flex flex-col items-center justify-center mt-5">
+          <div class="flex justify-center bg-primary-blue rounded-2xl">
+            <h3 class="font-bold text-white text-4xl p-4">Crear producto</h3>
+          </div>
+        </div>
       </section>
       <!-- NavBar Aside -->
       <nav
@@ -131,88 +130,204 @@
       </nav>
       <section class="flex justify-center items-center">
         <form
-          action=""
-          class="container bg-white mt-8 rounded-lg border-2 border-primary-blue"
+          id="productForm"
+          action=" "
+          class="form-product flex justify-around bg-white mt-20 rounded-lg"
         >
-          <div class="flex flex-col w-96 mt-8 ml-8">
-            <label class="textInput">Code:</label>
-            <input
-              type="text"
-              maxlength="10"
-              minlength="10"
-              placeholder="A2d3AeF32A"
-              class="searchInput"
-            />
-          </div>
-          <div class="flex flex-col w-96 mt-8 ml-8">
-            <span class="textInput">Nombre de producto:</span>
-            <input
-              type="text"
-              maxlength="20"
-              minlength="5"
-              placeholder='"Computador", "Pantalla", "Televisor"'
-              class="searchInput"
-            />
-          </div>
-          <div class="flex flex-col w-96 mt-8 ml-8">
-            <label class="textInput">Categoria del producto:</label>
-            <select name="" id="" class="searchInput font-semibold">
-              <option value="value1" class="font-semibold" selected>
-                Computador
-              </option>
-              <option value="value2" class="font-semibold">Pantalla</option>
-              <option value="value1" class="font-semibold">Celulares</option>
-              <option value="value3" class="font-semibold">Accesorio</option>
-              <option value="value4" class="font-semibold">Otro</option>
-            </select>
-          </div>
-          <div class="flex flex-col w-96 mt-8 ml-8">
-            <label class="textInput">Marca del producto:</label>
-            <select name="" id="" class="searchInput">
-              <option value="value1" class="font-semibold" selected>
-                SamSung
-              </option>
-              <option value="value2" class="font-semibold">Apple</option>
-              <option value="value1" class="font-semibold">et</option>
-              <option value="value3" class="font-semibold">et</option>
-            </select>
-          </div>
-          <div class="flex flex-col w-96 mt-8 ml-8">
-            <label class="textInput">Precio del producto:</label>
-            <input type="number" placeholder="200.000, 50.000, 10.000" />
-          </div>
-          <div class="flex flex-col w-96 mt-8 ml-8">
-            <label class="textInput">Imagen de producto:</label>
-            <div class="flex items-center">
-              <input type="text" class="searchInput" placeholder="URL" />
-              <img
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARRJREFUSEvtle9twjAUxO/MAE02CJukWyCCBF2AlAmACVBYgCIR1C3IJmSDZAHyKkf9A4pjE1QkPpBPlmLf73TvPZu488c76+MqwGhVhEI1BiWsDRE5T7LczfzMZdAJGK6LCYUbk5BAFvvYX9ogVkDtXPGgBbRYVWGr10phTHACIDhV0v+c+XkbxAqI1uUBgtDkdJgUc4ILCD/S95e32wBJKfpgGnsNI4NVEfQUjwDyNPb6/w7QgpHFwA/QHpFD4DEBdef0ONfFdfX4xX8iM81GI6IoKXXhgk7if4Fn6dR7PT9rArR2jg3aVo8n4De1Z0TOrn2oiG4fNMPN2piD70dGv2Ddpvnaq8IZdscNzje5o15j+xc/J60ZsLMIuQAAAABJRU5ErkJggg=="
-                class="cursor-pointer ml-4"
+          <article class="article-form rounded-2xl">
+            <div class="flex flex-col w-96 mt-8 ml-8">
+              <label class="textInput">Codigo:</label>
+              <input
+                id="codigoProducto"
+                type="text"
+                maxlength="14"
+                minlength="14"
+                placeholder="A2d3AeF32A"
+                class="input-form"
               />
             </div>
-            <select name="" id="" class="searchInput font-semibold">
-              <option value="value1" selected>Computador</option>
-              <option value="value2">Pantalla</option>
-              <option value="value3">Audifonos</option>
-              <option value="value4">Mouse</option>
-              <option value="value5">Teclado</option>
-              <option value="value6">Graficas</option>
-              <option value="value7">Reloj</option>
-              <option value="value8">Celulares</option>
-              <option value="value9">Tablets</option>
-              <option value="value10">Gafas RV</option>
-            </select>
-            <div>
-              <img
-                src="https://www.janus.com.co/cdn/shop/files/AX6monitor22tradicional_cb6899fd-7066-4b8b-b6ec-df1baf04fb71.jpg?v=1704986469"
-                class="h-96 w-96 object-cover"
-                alt="imageNotFound"
+            <div class="flex flex-col w-96 mt-8 ml-8">
+              <span class="textInput">Nombre de producto:</span>
+              <input
+                id="nombreProducto"
+                type="text"
+                maxlength="20"
+                minlength="5"
+                placeholder='"Computador", "Pantalla", "Televisor"'
+                class="input-form"
               />
             </div>
-          </div>
+            <div class="flex flex-col w-96 mt-8 ml-8">
+              <label class="textInput">Categoria del producto:</label>
+              <select
+                name=""
+                id="categoriaProducto"
+                class="input-select-form font-semibold"
+              >
+                <option value="computador" class="font-semibold" selected>
+                  computador
+                </option>
+                <option value="celulares" class="font-semibold">
+                  celulares
+                </option>
+                <option value="monitor" class="font-semibold">monitor</option>
+                <option value="tablet" class="font-semibold">tablet</option>
+                <option value="accesorio" class="font-semibold">
+                  accesorio
+                </option>
+              </select>
+            </div>
+            <div class="flex flex-col w-96 mt-8 ml-8">
+              <label class="textInput">Precio del producto:</label>
+              <input
+                id="precioProducto"
+                type="number"
+                class="input-price-form"
+                placeholder="$20.00, $5.00, $14.00"
+              />
+            </div>
+            <div class="flex flex-col w-full mt-8 ml-8">
+              <div class="w-11/12 flex items-center justify-between">
+                <span class="text-yellow-500 text-3xl font-medium">Feeds:</span>
+                <input
+                  id="feedsProducto"
+                  type="number"
+                  max="200000"
+                  class="input-feeds-form"
+                  placeholder="100, 200"
+                />
+                <span class="text-yellow-500 text-3xl font-medium">/</span>
+                <img src="/src/imgs/star-sm.png" alt="star.png" />
+                <input
+                  id="starProducto"
+                  type="number"
+                  min="0"
+                  max="5"
+                  class="input-feeds-form"
+                  placeholder="4.4, 2.3"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col w-full mt-8 ml-8">
+              <div class="flex items-center">
+                <span class="text-green-500 text-3xl font-medium mr-4"
+                  >El producto es ecofriendly:</span
+                >
+                <select
+                  name=""
+                  id="ecoFriendlyProducto"
+                  class="input-eco-form font-semibold"
+                >
+                  <option value="No" class="font-semibold" selected>No</option>
+                  <option value="Si" class="font-semibold">Si</option>
+                </select>
+              </div>
+            </div>
+            <div class="flex flex-col w-full mt-8 ml-8">
+              <div class="flex items-center">
+                <span class="text-3xl font-medium mr-4"
+                  >Vendidos en el mes:</span
+                >
+                <input
+                  id="ventasProducto"
+                  type="text"
+                  class="input-feeds-form"
+                  placeholder="2K, 1K"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col w-full mt-8 ml-8">
+              <div class="flex items-center">
+                <span class="text-3xl font-medium mr-4">Domicilio:</span>
+                <select
+                  name=""
+                  id="domicilioProducto"
+                  class="input-delivery-form font-semibold"
+                >
+                  <option value="Gratis" class="font-semibold" selected>
+                    Gratis
+                  </option>
+                  <option value="De pago" class="font-semibold">De pago</option>
+                </select>
+                <input
+                  id="domicilioPrecioProducto"
+                  type="number"
+                  max="100"
+                  class="input-deliveryprice-form"
+                  placeholder="$"
+                />
+              </div>
+            </div>
+          </article>
+          <article class="article-form flex justify-center rounded-lg">
+            <div class="flex flex-col items-center mt-10">
+              <label class="textInput">Imagen de producto:</label>
+              <div class="flex justify-center items-center">
+                <input
+                  id="imageProductUrl"
+                  type="text"
+                  class="input-form"
+                  placeholder="URL"
+                  disabled
+                />
+                <div id="candadoDivForm" class="candado-div-form">
+                  <img
+                    id="candadoImage"
+                    src="../imgs/lock.svg"
+                    class="cursor-pointer ml-4"
+                  />
+                </div>
+              </div>
+              <div
+                class="h-auto w-full flex items-center justify-center mt-2 border-b-2 border-l-ligh-gray pb-4"
+              >
+                <select
+                  name=""
+                  id="imageSelectProduct"
+                  class="searchInput font-semibold w-64 h-16"
+                >
+                  <option value="computador" selected>Computador</option>
+                  <option value="monitor">Monitor</option>
+                  <option value="audifonos">Audifonos</option>
+                  <option value="mouse">Mouse</option>
+                  <option value="teclado">Teclado</option>
+                  <option value="graficas">Graficas</option>
+                  <option value="reloj">Reloj</option>
+                  <option value="celulares">Celulares</option>
+                  <option value="tablets">Tablets</option>
+                  <option value="gafasrv">Gafas RV</option>
+                </select>
+              </div>
+              <div
+                class="product-image-form flex items-center border-b-2 border-ligh-gray p-2"
+              >
+                <img
+                  id="imageProduct"
+                  src="https://m.media-amazon.com/images/I/71WHbylnDGL._AC_SX444_SY639_FMwebp_QL65_.jpg"
+                  class="h-auto w-full object-cover"
+                  alt="imageNotFound"
+                />
+              </div>
+              <div class="flex mt-10 border-b-2 border-ligh-gray p-4">
+                <button type="submit" class="button-product">
+                  Crear Producto
+                </button>
+                <button id="buttonCampos" class="button-87">
+                  Vaciar campos
+                </button>
+              </div>
+            </div>
+          </article>
         </form>
       </section>
+      <div class="h-auto w-full flex justify-center">
+        <a
+          href="/index.html"
+          class="font-semibold text-lg text-primary-blue underline"
+          >¿Necesitas ayuda?</a
+        >
+      </div>
     </main>
-    <script src="../js/main.js"></script>
+    <script type="module" src="../js/registrarProducto.mjs"></script>
   </body>
 </html>

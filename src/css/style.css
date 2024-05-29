@@ -12,6 +12,7 @@ html {
 .nav-side {
   height: 100vh;
   width: 32rem;
+  border-right: 2px solid #dddddd;
 }
 
 .nav-side.close {
@@ -63,6 +64,191 @@ li:hover {
   .navbar-icons {
     fill: white;
   }
+}
+
+/* Form */
+
+.form-product {
+  height: 100%;
+  width: 82rem;
+}
+
+.article-form {
+  height: 70rem;
+  width: 38rem;
+  border: 2px solid #dddddd;
+}
+
+.input-form {
+  height: 4rem;
+  width: 28rem;
+  border: 2px solid #dddddd;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 1.2rem;
+  font-size: medium;
+  font-weight: 400;
+  outline-color: #5b91f0;
+}
+
+.input-select-form {
+  height: 4rem;
+  width: 28rem;
+  border: 2px solid #5b91f0;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 1.2rem;
+  font-size: medium;
+  font-weight: 600;
+  outline-color: #5b91f0;
+}
+
+.input-price-form {
+  height: 4rem;
+  width: 28rem;
+  border: 2px solid #dddddd;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 1.2rem;
+  font-size: medium;
+  font-weight: 600;
+  outline-color: #22c55e;
+}
+
+.input-feeds-form {
+  height: 4rem;
+  width: 8rem;
+  border: 2px solid #dddddd;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 1.2rem;
+  font-size: medium;
+  font-weight: 600;
+  outline-color: #eab357;
+}
+
+.input-eco-form {
+  height: 4rem;
+  width: 6rem;
+  border: 2px solid #dddddd;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 1.2rem;
+  font-size: medium;
+  font-weight: 600;
+  outline-color: #eab357;
+}
+
+.input-delivery-form {
+  height: 4rem;
+  width: 10rem;
+  border: 2px solid #dddddd;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 1.2rem;
+  font-size: medium;
+  font-weight: 600;
+  outline-color: #eab357;
+}
+
+.input-deliveryprice-form {
+  height: 4rem;
+  width: 14rem;
+  border: 2px solid #dddddd;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 1.2rem;
+  font-size: medium;
+  font-weight: 600;
+  outline-color: #22c55e;
+}
+
+.candado-div-form {
+  height: 2rem;
+  width: 2rem;
+}
+
+.product-image-form {
+  height: 34rem;
+  width: 25rem;
+}
+
+.button-product {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: bold;
+  box-shadow: 0px 0px 14px -7px #649af7;
+  background-image: linear-gradient(
+    45deg,
+    #75a6fb 0%,
+    #649af7 51%,
+    #75a6fb 100%
+  );
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.disable {
+  background-color: #dddddd;
+}
+
+.button-product:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-product:active {
+  transform: scale(0.95);
+}
+
+.button-87 {
+  margin: 10px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  border: 0px;
+  font-weight: 700;
+  box-shadow: 0px 0px 14px -7px #f09819;
+  background-image: linear-gradient(
+    45deg,
+    #a82308 0%,
+    #b2432c 51%,
+    #a82308 100%
+  );
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-87:hover {
+  background-position: right center;
+  /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+.button-87:active {
+  transform: scale(0.95);
 }
 
 /* Principal container */

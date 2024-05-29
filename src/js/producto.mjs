@@ -1,4 +1,7 @@
-import { data } from "../utils/api.mjs";
+import {
+  llenarProductos,
+  obtenerProductos,
+} from "../localStorage/localStorage.mjs";
 
 const mainContainer = document.getElementById("main-container");
 const navbar = document.getElementById("nav-bar");
@@ -7,13 +10,14 @@ const switchNav = document.getElementById("switch-navbar");
 const productsGrid = document.getElementById("products-grid");
 
 // vars
+let data;
 let loaderMainDiv = document.getElementById("loaderDiv");
 let mainProducts = document.getElementById("products-grid");
 let sectionPaginacion = document.createElement("section");
 let iterator = 1;
 
 // Cards
-const cardsPromesa = () => {
+const cardsPromesa = async () => {
   return new Promise((resolve, reject) => {
     sectionPaginacion.classList.add("hidden");
     let loaderDiv = document.createElement("div");
@@ -72,6 +76,7 @@ const llenarCards = async () => {
       "h-fit",
       "w-80",
       "flex",
+      "p-2",
       "justify-center",
       "items-center",
       "border-b-2",
@@ -79,7 +84,7 @@ const llenarCards = async () => {
     );
 
     let imageProduct = document.createElement("img");
-    imageProduct.classList.add("h-72", "w-64", "object-cover");
+    imageProduct.classList.add("h-72", "w-72", "object-cover");
     imageDiv.appendChild(imageProduct);
     imageProduct.src = element.product_photo;
 
@@ -250,9 +255,8 @@ const llenarCards = async () => {
 
 const promesaCards = async () => {
   const res = await cardsPromesa();
-  llenarCards();
+  await llenarCards();
 };
-promesaCards();
 
 // Pagination
 const cambiarPaginacion = (num) => {
@@ -307,8 +311,13 @@ const llenarPaginacion = async () => {
   }
   mainContainer.appendChild(sectionPaginacion);
 };
-llenarPaginacion();
 
+const iniciarProductos = async () => {
+  data = await obtenerProductos();
+  await promesaCards();
+  await llenarPaginacion();
+};
+iniciarProductos();
 // Bar
 switchNav.addEventListener("click", () => {
   navbar.classList.toggle("close");

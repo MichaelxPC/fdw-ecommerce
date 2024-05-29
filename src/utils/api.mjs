@@ -409,6 +409,7 @@ const data = [
     product_title:
       "HP Stream 14&quot; HD BrightView Laptop, Intel Celeron N4120, 16GB RAM, 256GB Storage (128GB Emmc+ 128GB USB Card), Intel UHD Graphics, 720p Webcam, Wi-Fi, 1 Year Office 365, Win 11 S, Gold",
     product_price: "$299.00",
+    categorie: "computador",
     product_star_rating: "4.4",
     product_num_ratings: 1792,
     product_url: "https://www.amazon.com/dp/B0CZL2SLCJ",
@@ -587,7 +588,7 @@ const data = [
     code: "B0CHHSFMRL",
     product_title:
       "Sceptre New 27-inch Gaming Monitor 100Hz 1ms DisplayPort HDMI x2 100% sRGB AMD FreeSync Build-in Speakers, Eye Care Frameless Machine Black 2024 (E275W-FW100T)",
-    categorie: "Monitor",
+    categorie: "monitor",
     product_price: "$99.97",
     product_star_rating: "4.6",
     product_num_ratings: 32064,
@@ -607,7 +608,7 @@ const data = [
     code: "B0BY9NPLP4",
     product_title:
       "Acer KB272 EBI 27&quot; IPS Full HD (1920 x 1080) Zero-Frame Gaming Office Monitor | AMD FreeSync Technology | Up to 100Hz Refresh | 1ms (VRB) | Low Blue Light | Tilt | HDMI &amp; VGA Ports,Black",
-    categorie: "Monitor",
+    categorie: "monitor",
     product_price: "$99.99",
     product_star_rating: "4.6",
     product_num_ratings: 2957,
@@ -628,7 +629,7 @@ const data = [
     product_title:
       "Sceptre Curved 24-inch Gaming Monitor 1080p R1500 98% sRGB HDMI x2 VGA Build-in Speakers, VESA Wall Mount Machine Black (C248W-1920RN Series)",
     product_price: "$84.97",
-    categorie: "Monitor",
+    categorie: "monitor",
     product_star_rating: "4.6",
     product_num_ratings: 21668,
     product_url: "https://www.amazon.com/dp/B07KXSR99Y",
@@ -648,7 +649,7 @@ const data = [
     product_title:
       "PHILIPS 221V8LB 22 inch Full HD (1920 x 1080) Monitor, 100Hz Refresh Rate, VESA, HDMI x1, VGA x1, LowBlue Mode, Adaptive Sync, 4 Year Advance Replacement Warranty",
     product_price: "$69.99",
-    categorie: "Monitor",
+    categorie: "monitor",
     product_star_rating: "4.6",
     product_num_ratings: 3379,
     product_url: "https://www.amazon.com/dp/B0CVM2GJCN",
@@ -667,7 +668,7 @@ const data = [
     code: "B07Z8TC28F",
     product_title:
       "ASUS VA24EHE 23.8” Monitor 75Hz Full HD (1920x1080) IPS Eye Care HDMI D-Sub DVI-D,Black",
-    categorie: "Monitor",
+    categorie: "monitor",
     product_price: "$89.00",
     product_star_rating: "4.6",
     product_num_ratings: 4107,
@@ -688,7 +689,7 @@ const data = [
     product_title:
       "Sceptre 22 inch 75Hz 1080P LED Monitor 99% sRGB HDMI X2 VGA Build-In Speakers, Machine Black (E225W-19203R series)",
     product_price: "$69.97",
-    categorie: "Monitor",
+    categorie: "monitor",
     product_star_rating: "4.6",
     product_num_ratings: 9310,
     product_url: "https://www.amazon.com/dp/B07774L6TT",
@@ -707,7 +708,7 @@ const data = [
     code: "B0C1KPXPM9",
     product_title:
       "SAMSUNG 34&quot; ViewFinity S50GC Series Ultra-WQHD Monitor, 100Hz, 5ms, HDR10, AMD FreeSync, Eye Care, Borderless Design, PIP, PBP, LS34C502GANXZA, 2023, Black",
-    categorie: "Monitor",
+    categorie: "monitor",
     product_price: "$249.99",
     product_original_price: "$379.99",
     currency: "USD",
@@ -729,7 +730,7 @@ const data = [
     code: "B0B6DFG1FQ",
     product_title:
       "Acer Nitro KG241Y Sbiip 23.8” Full HD (1920 x 1080) VA Gaming Monitor | AMD FreeSync Premium Technology | 165Hz Refresh Rate | 1ms (VRB) | ZeroFrame Design | 1 x Display Port 1.2 &amp; 2 x HDMI 2.0,Black",
-    categorie: "Monitor",
+    categorie: "monitor",
     product_price: "$109.99",
     product_star_rating: "4.5",
     product_num_ratings: 5481,
@@ -749,7 +750,7 @@ const data = [
     code: "B0C5NDN7W3",
     product_title:
       "AOPEN acer 20E0Q bi 19.5-inch Professional HD+ (1600 x 900) Monitor | 75Hz Refresh Rate | VESA Mountable Eye Protection: BlueLight Filter &amp; Flickerless Technology (1 x HDMI &amp; VGA Port)",
-    categorie: "Monitor",
+    categorie: "monitor",
     product_price: "$59.99",
     product_star_rating: "4.3",
     product_num_ratings: 778,
@@ -769,7 +770,7 @@ const data = [
     code: "B0CG9HF9KW",
     product_title:
       "SANSUI 27 Inch Monitor, IPS 100Hz Computer Monitor Full HD 1920 x 1080P with HDMI VGA Interface Eye Care Frameless 100 x 100mm VESA (ES-27X3AL, HDMI Cable Included)",
-    categorie: "Monitor",
+    categorie: "monitor",
     product_price: "$98.99",
     product_star_rating: "4.4",
     product_num_ratings: 582,
@@ -790,7 +791,7 @@ const data = [
     product_title:
       "SAMSUNG 27&quot; CF39 Series FHD 1080p Curved Computer Monitor, Ultra Slim Design, AMD FreeSync, 4ms response, HDMI, DisplayPort, VESA Compatible, Wide Viewing Angle, LC27F398FWNXZA, Black",
     product_price: "$149.99",
-    categorie: "Monitor",
+    categorie: "monitor",
     product_original_price: "$169.99",
     currency: "USD",
     product_star_rating: "4.6",
@@ -811,7 +812,7 @@ const data = [
     code: "B078HQH2B2",
     product_title:
       "Sceptre New 22 Inch FHD LED Monitor 75Hz 2X HDMI VGA Build-in Speakers, Machine Black (E22 Series), 1920 x 1080 Pixels",
-    categorie: "Monitor",
+    categorie: "monitor",
     product_price: "$69.97",
     product_star_rating: "4.4",
     product_num_ratings: 7886,
@@ -831,7 +832,7 @@ const data = [
     code: "B0B928B6BC",
     product_title:
       "LG UltraGear QHD 34-Inch Curved Gaming Monitor 34GP63A-B, VA with HDR 10 Compatibility and AMD FreeSync Premium, 160Hz, Black",
-    categorie: "Monitor",
+    categorie: "monitor",
     product_price: "$314.65",
     product_star_rating: "4.5",
     product_num_ratings: 1229,
@@ -851,7 +852,7 @@ const data = [
     code: "B0B9NNWXVP",
     product_title:
       "Portable Monitor 15.6inch FHD 1080P USB C HDMI Gaming Ultra-Slim IPS Display w/Smart Cover &amp; Speakers,HDR Plug&amp;Play, External Monitor for Laptop PC Phone Mac (15.6&#x27;&#x27; 1080P)",
-    categorie: "Monitor",
+    categorie: "monitor",
     product_price: "$89.98",
     product_star_rating: "4.5",
     product_num_ratings: 5767,
