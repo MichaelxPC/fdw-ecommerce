@@ -15,6 +15,10 @@ let loaderMainDiv = document.getElementById("loaderDiv");
 let mainProducts = document.getElementById("products-grid");
 let sectionPaginacion = document.createElement("section");
 let iterator = 1;
+let searchInput = document.getElementById("searchInput");
+let categoriaProducto = document.getElementById("categoriaProducto");
+
+let buttonFiltrar = document.getElementById("filtrar-button");
 
 // Cards
 const cardsPromesa = async () => {
@@ -318,6 +322,22 @@ const iniciarProductos = async () => {
   await llenarPaginacion();
 };
 iniciarProductos();
+
+// Filtros
+
+buttonFiltrar.addEventListener("click", () => {
+  filtrarProductos();
+});
+
+const filtrarProductos = async () => {
+  const filterProducts = data.filter((product) => {
+    const searchContent = searchInput.value.toLocaleLowerCase();
+    const nameProduct = product.product_title.toLowerCase();
+    return nameProduct.includes(searchContent);
+  });
+  console.log(filterProducts);
+};
+
 // Bar
 switchNav.addEventListener("click", () => {
   navbar.classList.toggle("close");

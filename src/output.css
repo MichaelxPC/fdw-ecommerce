@@ -594,7 +594,7 @@ video {
   }
 }
 
-.searchInput {
+.searchInputSelect {
   margin-top: 0.5rem;
   height: 3rem;
   width: 24rem;
@@ -607,23 +607,7 @@ video {
   outline-color: #DDDDDD;
 }
 
-.searchInput:focus {
-  outline-color: #5B91F0;
-}
-
-.searchProducts {
-  margin-top: 0.5rem;
-  height: 3rem;
-  width: 24rem;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 400;
-  outline-color: #DDDDDD;
-}
-
-.searchProducts:focus {
+.searchInputSelect:focus {
   outline-color: #5B91F0;
 }
 
@@ -1033,6 +1017,10 @@ video {
 .hover\:bg-primary-blue:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(91 145 240 / var(--tw-bg-opacity));
+}
+
+.focus\:outline-primary-blue:focus {
+  outline-color: #5B91F0;
 }
 
 @media (min-width: 500px) {
