@@ -381,3 +381,43 @@ li:hover {
 .hidden {
   display: none;
 }
+
+/* Tablas */
+
+.tabla-producto {
+  margin: 2.5rem 0;
+  font-size: 1.5rem;
+  min-width: 150rem;
+  tr:nth-child(even) {
+    background-color: #f8f6ff;
+  }
+}
+.tabla-producto thead tr {
+  height: 4rem;
+  background-color: #6792de;
+  color: white;
+}
+
+.tabla-producto thead tr th {
+  padding-left: 0.1rem;
+}
+
+.tabla-producto th .tabla-producto td {
+  padding: 1.2rem 1.5rem;
+}
+
+.tabla-producto tbody tr {
+  height: 4rem;
+  width: 2rem;
+  border-left: 0.1rem solid #dddddd;
+  border-right: 0.1rem solid #dddddd;
+  border-bottom: 0.1rem solid #dddddd;
+}
+
+.tabla-producto tbody tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+.tabla-producto tbody tr:last-of-type {
+  border-bottom: 0.2rem solid #6792de;
+}

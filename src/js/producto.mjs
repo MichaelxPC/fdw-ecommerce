@@ -18,6 +18,8 @@ let iterator = 1;
 let searchInput = document.getElementById("searchInput");
 let categoriaProducto = document.getElementById("categoriaProducto");
 
+let slideValue = document.getElementById("slideValue");
+let slideProducto = document.getElementById("precioProductoSlide");
 let buttonFiltrar = document.getElementById("filtrar-button");
 
 // Cards
@@ -124,7 +126,7 @@ const llenarCards = async () => {
       "mr-2"
     );
     priceDiv.appendChild(priceSpan);
-    priceSpan.innerHTML = element.product_price;
+    priceSpan.innerHTML = `$${element.product_price}`;
     categoryPriceDiv.appendChild(categoryDiv);
     categoryPriceDiv.appendChild(priceDiv);
     // Feed
@@ -329,12 +331,21 @@ buttonFiltrar.addEventListener("click", () => {
   filtrarProductos();
 });
 
+slideProducto.oninput = () => {
+  let value = slideProducto.value;
+  slideValue.innerHTML = `$${value}`;
+};
+
 const filtrarProductos = async () => {
+  data = await obtenerProductos();
   const filterProducts = data.filter((product) => {
     const searchContent = searchInput.value.toLocaleLowerCase();
     const nameProduct = product.product_title.toLowerCase();
     return nameProduct.includes(searchContent);
   });
+
+  if (categoriaProducto.value == "") {
+  }
   console.log(filterProducts);
 };
 

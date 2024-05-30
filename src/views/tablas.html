@@ -110,19 +110,9 @@
               >
             </a>
           </li>
-
-          <!-- User Section -->
-          <!-- <li
-            class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray hover:bg-black"
-          >
-            <img
-              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUdJREFUSEvVVcFxwjAQvIMCsDuATqCLDOIBX5jBoQJIBcTMwBceEUMX0EnowKaAcBmYyBHKnWzG9iP+yqe93ds9IdT8Yc33w/8B6MfJHAEXRhEdBffmK2EwWCZdauDRlvspABWndCs2Re7c1Co9AkGXkEb7abizzwsxyAX4aeDrSp3DLDxXCqDeL1tAGgLhTr+2Ri47kYHpWrKxkUvF6ScAtPFKvY9ZeBIB3E6KAPRXyRAJt4Bw0tOgxzWTMXhZJu1mA2/dnHUUdOyfpRn4hmvqHyQyBS5dDsC2puSuPzmQKHMAecNlGVgygTQ0U2hAOWt6bZrpCrTYR+EbN7iMqWBNLwAXe8mqeSzFXeQuLhbAY82nk1zmzWCTrOLLGoDGALjRUWvymAn5zBs0LljcBrUT7vM/a9NfC9bMoIzmhbdpVSCFHpwyYN8vp8YZ1pIxXgAAAABJRU5ErkJggg=="
-              class="h-14 w-14"
-            />
-            <span class="text-3xl text-text-color font-medium">Products</span>
-          </li> -->
         </ul>
       </nav>
+
       <section id="product-main" class="product-container bg-white rounded-lg">
         <div class="flex flex-col items-center justify-center mt-5">
           <div class="flex justify-center bg-primary-blue rounded-2xl">
@@ -135,74 +125,103 @@
             placeholder="samsung, acer, alcatel"
           />
         </div>
-        <div class="container flex flex-col items-center">
-          <div id="loaderDiv" class="flex justify-center items-center"></div>
-          <section
-            id="products-grid"
-            class="p-4 flex flex-col items-center gap-4 mb:grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5"
+        <div id="loaderDiv" class="flex justify-center items-center"></div>
+        <section
+          id="products-table"
+          class="flex flex-col justify-center items-center"
+        >
+          <table class="tabla-producto">
+            <thead>
+              <tr>
+                <th>Codigo</th>
+                <th>Nombre</th>
+                <th>Categoria</th>
+                <th>Precio</th>
+                <th>Feeds</th>
+                <th>Estrellas</th>
+                <th>EcoFriendly</th>
+                <th>Domicilio</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpo-tabla">
+              <tr>
+                <td>123</td>
+                <td>Ejemplo</td>
+                <td>Categoria</td>
+                <td>Precio</td>
+                <td>Feeds</td>
+                <td>Estrellas</td>
+                <td>EcoFriendly</td>
+                <td>Domicilio</td>
+              </tr>
+              <tr>
+                <td>123</td>
+                <td>Ejemplo</td>
+                <td>Categoria</td>
+                <td>Precio</td>
+                <td>Feeds</td>
+                <td>Estrellas</td>
+                <td>EcoFriendly</td>
+                <td>Domicilio</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+        <aside
+          class="filtros fixed flex flex-col items-center top-60 right-0 bg-white z-30 rounded-2xl border-2 border-ligh-gray"
+        >
+          <span class="font-semibold text-5xl text-primary-blue">Filtrar</span>
+          <div
+            class="flex flex-col items-center h-fit w-full mt-4 border-y-2 border-ligh-gray"
           >
-            <!-- Tarjetas -->
-          </section>
-          <!-- Filtro -->
-          <aside
-            class="filtros fixed flex flex-col items-center top-60 right-0 bg-white z-30 rounded-2xl border-2 border-ligh-gray"
-          >
-            <span class="font-semibold text-5xl text-primary-blue"
-              >Filtrar</span
+            <span class="text-3xl mr-2 ml-2 font-semibold text-text-color"
+              >Precio:</span
             >
-            <div
-              class="flex flex-col items-center h-fit w-full mt-4 border-y-2 border-ligh-gray"
-            >
-              <span class="text-3xl mr-2 ml-2 font-semibold text-text-color"
-                >Precio:</span
-              >
-              <div class="flex items-center justify-center font-semibold">
-                <div>
-                  <span id="slideValue" class="text-3xl mr-2 text-green-400"
-                    >$40</span
-                  >
-                </div>
-                <input
-                  id="precioProductoSlide"
-                  type="range"
-                  min="0"
-                  max="1000"
-                  value="40"
-                  step="1"
-                />
-                <div class="text-3xl ml-1 text-green-400">$1.000</div>
+            <div class="flex items-center justify-center font-semibold">
+              <div>
+                <span id="slideValue" class="text-3xl mr-2 text-green-400"
+                  >$40</span
+                >
               </div>
+              <input
+                id="precioProductoSlide"
+                type="range"
+                min="0"
+                max="1000"
+                value="40"
+                step="1"
+              />
+              <div class="text-3xl ml-1 text-green-400">$1.000</div>
             </div>
-            <div
-              class="flex flex-col items-center h-fit w-full mt-4 border-b-2 border-ligh-gray"
+          </div>
+          <div
+            class="flex flex-col items-center h-fit w-full mt-4 border-b-2 border-ligh-gray"
+          >
+            <span class="text-3xl mr-2 ml-2 font-semibold text-text-color"
+              >Categoria:</span
             >
-              <span class="text-3xl mr-2 ml-2 font-semibold text-text-color"
-                >Categoria:</span
-              >
-              <select name="" id="categoriaProducto" class="inputFilter">
-                <option value="computador" class="font-semibold">
-                  computador
-                </option>
-                <option value="monitor" class="font-semibold">monitor</option>
-                <option value="celular" class="font-semibold">celular</option>
-                <option value="tablet" class="font-semibold">tablet</option>
-                <option value="accesorio" class="font-semibold">
-                  accesorio
-                </option>
-                <option value="" class="font-semibold"></option>
-              </select>
-            </div>
-            <div
-              class="flex flex-col items-center h-fit w-full mt-4 border-b-2 border-ligh-gray"
-            >
-              <button id="filtrar-button" class="button-filtrar">
-                Siguiente
-              </button>
-            </div>
-          </aside>
-        </div>
+            <select name="" id="categoriaProducto" class="inputFilter">
+              <option value="" class="font-semibold">Ninguna</option>
+              <option value="computador" class="font-semibold">
+                computador
+              </option>
+              <option value="monitor" class="font-semibold">monitor</option>
+              <option value="celular" class="font-semibold">celular</option>
+              <option value="tablet" class="font-semibold">tablet</option>
+              <option value="accesorio" class="font-semibold">accesorio</option>
+            </select>
+          </div>
+          <div
+            class="flex flex-col items-center h-fit w-full mt-4 border-b-2 border-ligh-gray"
+          >
+            <button id="filtrar-button" class="button-filtrar">
+              Siguiente
+            </button>
+          </div>
+        </aside>
       </section>
     </main>
-    <script type="module" src="../js/producto.mjs"></script>
+    <script type="module" src="../js/tabla.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
