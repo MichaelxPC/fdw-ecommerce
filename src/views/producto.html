@@ -45,7 +45,7 @@
           <li
             class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue"
           >
-            <a href="../../index.html"
+            <a href="/index.html"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -58,7 +58,6 @@
                 ></path>
               </svg>
             </a>
-
             <span
               class="nav-items close-text text-3xl text-text-color font-medium"
               >Home</span
@@ -67,7 +66,10 @@
           <li
             class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue hover:border-2 hover:border-ligh-gray"
           >
-            <a href="./registrarProducto.html" class="flex items-center">
+            <a
+              href="/src/views/registrarProducto.html"
+              class="flex items-center"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-14 w-14 navbar-icons"
@@ -91,7 +93,7 @@
           <li
             class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue"
           >
-            <a href="./producto.html" class="flex items-center">
+            <a href="" class="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -107,6 +109,39 @@
               <span
                 class="nav-items close-text text-3xl text-text-color font-medium"
                 >Products</span
+              >
+            </a>
+          </li>
+          <li
+            class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue"
+          >
+            <a href="/src/views/tablas.html" class="flex items-center">
+              <svg
+                viewBox="0 0 24.00 24.00"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#ffffff"
+                class="h-14 w-14 navbar-icons"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M9 4L9 20M15 4L15 20M3 9H21M3 15H21M6.2 20H17.8C18.9201 20 19.4802 20 19.908 19.782C20.2843 19.5903 20.5903 19.2843 20.782 18.908C21 18.4802 21 17.9201 21 16.8V7.2C21 6.0799 21 5.51984 20.782 5.09202C20.5903 4.71569 20.2843 4.40973 19.908 4.21799C19.4802 4 18.9201 4 17.8 4H6.2C5.07989 4 4.51984 4 4.09202 4.21799C3.71569 4.40973 3.40973 4.71569 3.21799 5.09202C3 5.51984 3 6.07989 3 7.2V16.8C3 17.9201 3 18.4802 3.21799 18.908C3.40973 19.2843 3.71569 19.5903 4.09202 19.782C4.51984 20 5.07989 20 6.2 20Z"
+                    stroke="#ffffff"
+                    stroke-width="0.4800000000000001"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+              <span
+                class="nav-items close-text text-3xl text-text-color font-medium"
+                >Tablas</span
               >
             </a>
           </li>
@@ -128,12 +163,6 @@
           <div class="flex justify-center bg-primary-blue rounded-2xl">
             <h3 class="font-bold text-white text-4xl p-4">Buscar productos</h3>
           </div>
-          <input
-            id="searchInput"
-            type="text"
-            class="searchInput mt-4 p-2 focus:outline-primary-blue font-bold rounded-lg"
-            placeholder="samsung, acer, alcatel"
-          />
         </div>
         <div class="container flex flex-col items-center">
           <div id="loaderDiv" class="flex justify-center items-center"></div>
@@ -144,62 +173,6 @@
             <!-- Tarjetas -->
           </section>
           <!-- Filtro -->
-          <aside
-            class="filtros fixed flex flex-col items-center top-60 right-0 bg-white z-30 rounded-2xl border-2 border-ligh-gray"
-          >
-            <span class="font-semibold text-5xl text-primary-blue"
-              >Filtrar</span
-            >
-            <div
-              class="flex flex-col items-center h-fit w-full mt-4 border-y-2 border-ligh-gray"
-            >
-              <span class="text-3xl mr-2 ml-2 font-semibold text-text-color"
-                >Precio:</span
-              >
-              <div class="flex items-center justify-center font-semibold">
-                <div>
-                  <span id="slideValue" class="text-3xl mr-2 text-green-400"
-                    >$40</span
-                  >
-                </div>
-                <input
-                  id="precioProductoSlide"
-                  type="range"
-                  min="0"
-                  max="1000"
-                  value="40"
-                  step="1"
-                />
-                <div class="text-3xl ml-1 text-green-400">$1.000</div>
-              </div>
-            </div>
-            <div
-              class="flex flex-col items-center h-fit w-full mt-4 border-b-2 border-ligh-gray"
-            >
-              <span class="text-3xl mr-2 ml-2 font-semibold text-text-color"
-                >Categoria:</span
-              >
-              <select name="" id="categoriaProducto" class="inputFilter">
-                <option value="computador" class="font-semibold">
-                  computador
-                </option>
-                <option value="monitor" class="font-semibold">monitor</option>
-                <option value="celular" class="font-semibold">celular</option>
-                <option value="tablet" class="font-semibold">tablet</option>
-                <option value="accesorio" class="font-semibold">
-                  accesorio
-                </option>
-                <option value="" class="font-semibold"></option>
-              </select>
-            </div>
-            <div
-              class="flex flex-col items-center h-fit w-full mt-4 border-b-2 border-ligh-gray"
-            >
-              <button id="filtrar-button" class="button-filtrar">
-                Siguiente
-              </button>
-            </div>
-          </aside>
         </div>
       </section>
     </main>

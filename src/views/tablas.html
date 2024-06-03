@@ -45,7 +45,7 @@
           <li
             class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue"
           >
-            <a href="../../index.html"
+            <a href="/index.html"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -67,7 +67,10 @@
           <li
             class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue hover:border-2 hover:border-ligh-gray"
           >
-            <a href="./registrarProducto.html" class="flex items-center">
+            <a
+              href="/src/views/registrarProducto.html"
+              class="flex items-center"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-14 w-14 navbar-icons"
@@ -84,14 +87,14 @@
               </svg>
               <span
                 class="nav-items close-text text-3xl text-text-color font-medium"
-                >Create Product</span
+                >Crear producto</span
               >
             </a>
           </li>
           <li
             class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue"
           >
-            <a href="./producto.html" class="flex items-center">
+            <a href="/src/views/producto.html" class="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -106,13 +109,56 @@
               </svg>
               <span
                 class="nav-items close-text text-3xl text-text-color font-medium"
-                >Products</span
+                >Productos</span
               >
             </a>
           </li>
+          <li
+            class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue"
+          >
+            <a href="" class="flex items-center">
+              <svg
+                viewBox="0 0 24.00 24.00"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#ffffff"
+                class="h-14 w-14 navbar-icons"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M9 4L9 20M15 4L15 20M3 9H21M3 15H21M6.2 20H17.8C18.9201 20 19.4802 20 19.908 19.782C20.2843 19.5903 20.5903 19.2843 20.782 18.908C21 18.4802 21 17.9201 21 16.8V7.2C21 6.0799 21 5.51984 20.782 5.09202C20.5903 4.71569 20.2843 4.40973 19.908 4.21799C19.4802 4 18.9201 4 17.8 4H6.2C5.07989 4 4.51984 4 4.09202 4.21799C3.71569 4.40973 3.40973 4.71569 3.21799 5.09202C3 5.51984 3 6.07989 3 7.2V16.8C3 17.9201 3 18.4802 3.21799 18.908C3.40973 19.2843 3.71569 19.5903 4.09202 19.782C4.51984 20 5.07989 20 6.2 20Z"
+                    stroke="#ffffff"
+                    stroke-width="0.4800000000000001"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+              <span
+                class="nav-items close-text text-3xl text-text-color font-medium"
+                >Tablas</span
+              >
+            </a>
+          </li>
+
+          <!-- User Section -->
+          <!-- <li
+            class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray hover:bg-black"
+          >
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUdJREFUSEvVVcFxwjAQvIMCsDuATqCLDOIBX5jBoQJIBcTMwBceEUMX0EnowKaAcBmYyBHKnWzG9iP+yqe93ds9IdT8Yc33w/8B6MfJHAEXRhEdBffmK2EwWCZdauDRlvspABWndCs2Re7c1Co9AkGXkEb7abizzwsxyAX4aeDrSp3DLDxXCqDeL1tAGgLhTr+2Ri47kYHpWrKxkUvF6ScAtPFKvY9ZeBIB3E6KAPRXyRAJt4Bw0tOgxzWTMXhZJu1mA2/dnHUUdOyfpRn4hmvqHyQyBS5dDsC2puSuPzmQKHMAecNlGVgygTQ0U2hAOWt6bZrpCrTYR+EbN7iMqWBNLwAXe8mqeSzFXeQuLhbAY82nk1zmzWCTrOLLGoDGALjRUWvymAn5zBs0LljcBrUT7vM/a9NfC9bMoIzmhbdpVSCFHpwyYN8vp8YZ1pIxXgAAAABJRU5ErkJggg=="
+              class="h-14 w-14"
+            />
+            <span class="text-3xl text-text-color font-medium">Products</span>
+          </li> -->
         </ul>
       </nav>
-
       <section id="product-main" class="product-container bg-white rounded-lg">
         <div class="flex flex-col items-center justify-center mt-5">
           <div class="flex justify-center bg-primary-blue rounded-2xl">
@@ -130,11 +176,12 @@
           id="products-table"
           class="flex flex-col justify-center items-center"
         >
-          <table class="tabla-producto">
+          <table id="productsTable" class="tabla-producto">
             <thead>
               <tr>
                 <th>Codigo</th>
                 <th>Nombre</th>
+                <th>Imagen</th>
                 <th>Categoria</th>
                 <th>Precio</th>
                 <th>Feeds</th>
@@ -143,28 +190,7 @@
                 <th>Domicilio</th>
               </tr>
             </thead>
-            <tbody id="cuerpo-tabla">
-              <tr>
-                <td>123</td>
-                <td>Ejemplo</td>
-                <td>Categoria</td>
-                <td>Precio</td>
-                <td>Feeds</td>
-                <td>Estrellas</td>
-                <td>EcoFriendly</td>
-                <td>Domicilio</td>
-              </tr>
-              <tr>
-                <td>123</td>
-                <td>Ejemplo</td>
-                <td>Categoria</td>
-                <td>Precio</td>
-                <td>Feeds</td>
-                <td>Estrellas</td>
-                <td>EcoFriendly</td>
-                <td>Domicilio</td>
-              </tr>
-            </tbody>
+            <tbody id="cuerpo-tabla"></tbody>
           </table>
         </section>
         <aside
@@ -212,10 +238,13 @@
             </select>
           </div>
           <div
-            class="flex flex-col items-center h-fit w-full mt-4 border-b-2 border-ligh-gray"
+            class="flex flex-col items-center h-fit w-full p-2 mt-4 border-b-2 border-ligh-gray"
           >
             <button id="filtrar-button" class="button-filtrar">
               Siguiente
+            </button>
+            <button id="button-limpiar" class="button-limpiar mt-2">
+              Limpiar
             </button>
           </div>
         </aside>

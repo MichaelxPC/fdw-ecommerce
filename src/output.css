@@ -669,6 +669,10 @@ video {
   z-index: 30;
 }
 
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -713,20 +717,24 @@ video {
   margin-top: 1.25rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mt-12 {
+  margin-top: 3rem;
 }
 
 .flex {
   display: flex;
 }
 
-.h-12 {
-  height: 3rem;
+.table {
+  display: table;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-14 {
@@ -749,10 +757,6 @@ video {
   height: 8rem;
 }
 
-.h-72 {
-  height: 18rem;
-}
-
 .h-auto {
   height: auto;
 }
@@ -770,12 +774,20 @@ video {
   height: 100vh;
 }
 
-.w-0 {
-  width: 0px;
+.h-80 {
+  height: 20rem;
 }
 
-.w-11\/12 {
-  width: 91.666667%;
+.h-28 {
+  height: 7rem;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+.w-0 {
+  width: 0px;
 }
 
 .w-14 {
@@ -790,10 +802,6 @@ video {
   width: 5rem;
 }
 
-.w-48 {
-  width: 12rem;
-}
-
 .w-64 {
   width: 16rem;
 }
@@ -804,6 +812,18 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.w-11\/12 {
+  width: 91.666667%;
+}
+
+.w-80 {
+  width: 20rem;
+}
+
+.cursor-none {
+  cursor: none;
 }
 
 .cursor-pointer {
@@ -838,20 +858,6 @@ video {
   gap: 1rem;
 }
 
-.self-center {
-  align-self: center;
-}
-
-.justify-self-end {
-  justify-self: end;
-}
-
-.truncate {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
 .rounded-2xl {
   border-radius: 1rem;
 }
@@ -862,6 +868,10 @@ video {
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
 }
 
 .border-2 {
@@ -880,6 +890,11 @@ video {
 .border-ligh-gray {
   --tw-border-opacity: 1;
   border-color: rgb(221 221 221 / var(--tw-border-opacity));
+}
+
+.border-primary-blue {
+  --tw-border-opacity: 1;
+  border-color: rgb(91 145 240 / var(--tw-border-opacity));
 }
 
 .border-l-ligh-gray {
@@ -905,6 +920,10 @@ video {
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.p-10 {
+  padding: 2.5rem;
 }
 
 .p-2 {
@@ -946,11 +965,6 @@ video {
 
 .text-lg {
   font-size: 1.125rem;
-  line-height: 1.75rem;
-}
-
-.text-xl {
-  font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
@@ -998,6 +1012,10 @@ video {
 
 .underline {
   text-decoration-line: underline;
+}
+
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .hover\:border-2:hover {

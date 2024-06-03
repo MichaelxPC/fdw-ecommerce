@@ -50,7 +50,7 @@
           <li
             class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue"
           >
-            <a href="../../index.html"
+            <a href="/index.html"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -72,7 +72,7 @@
           <li
             class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue hover:border-2 hover:border-ligh-gray"
           >
-            <a href="./registrarProducto.html" class="flex items-center">
+            <a href="" class="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-14 w-14 navbar-icons"
@@ -96,7 +96,7 @@
           <li
             class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue"
           >
-            <a href="./producto.html" class="flex items-center">
+            <a href="/src/views/producto.html" class="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -112,6 +112,39 @@
               <span
                 class="nav-items close-text text-3xl text-text-color font-medium"
                 >Products</span
+              >
+            </a>
+          </li>
+          <li
+            class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue"
+          >
+            <a href="/src/views/tablas.html" class="flex items-center">
+              <svg
+                viewBox="0 0 24.00 24.00"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#ffffff"
+                class="h-14 w-14 navbar-icons"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M9 4L9 20M15 4L15 20M3 9H21M3 15H21M6.2 20H17.8C18.9201 20 19.4802 20 19.908 19.782C20.2843 19.5903 20.5903 19.2843 20.782 18.908C21 18.4802 21 17.9201 21 16.8V7.2C21 6.0799 21 5.51984 20.782 5.09202C20.5903 4.71569 20.2843 4.40973 19.908 4.21799C19.4802 4 18.9201 4 17.8 4H6.2C5.07989 4 4.51984 4 4.09202 4.21799C3.71569 4.40973 3.40973 4.71569 3.21799 5.09202C3 5.51984 3 6.07989 3 7.2V16.8C3 17.9201 3 18.4802 3.21799 18.908C3.40973 19.2843 3.71569 19.5903 4.09202 19.782C4.51984 20 5.07989 20 6.2 20Z"
+                    stroke="#ffffff"
+                    stroke-width="0.4800000000000001"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+              <span
+                class="nav-items close-text text-3xl text-text-color font-medium"
+                >Tablas</span
               >
             </a>
           </li>
@@ -151,8 +184,8 @@
               <input
                 id="nombreProducto"
                 type="text"
-                maxlength="20"
-                minlength="5"
+                maxlength="60"
+                minlength="10"
                 placeholder='"Computador", "Pantalla", "Televisor"'
                 class="input-form"
               />
@@ -183,16 +216,19 @@
                 id="precioProducto"
                 type="number"
                 class="input-price-form"
+                max="1000"
+                min="5"
                 placeholder="$20.00, $5.00, $14.00"
               />
             </div>
             <div class="flex flex-col w-full mt-8 ml-8">
-              <div class="w-11/12 flex items-center justify-between">
+              <div class="div-feeds flex items-center justify-between">
                 <span class="text-yellow-500 text-3xl font-medium">Feeds:</span>
                 <input
                   id="feedsProducto"
                   type="number"
                   max="200000"
+                  min="0"
                   class="input-feeds-form"
                   placeholder="100, 200"
                 />
@@ -230,9 +266,11 @@
                 >
                 <input
                   id="ventasProducto"
-                  type="text"
-                  class="input-feeds-form"
-                  placeholder="2K, 1K"
+                  type="number"
+                  min="1"
+                  max="100000"
+                  class="input-sells-form"
+                  placeholder="1, 2, 3"
                 />
               </div>
             </div>
@@ -303,7 +341,7 @@
               >
                 <img
                   id="imageProduct"
-                  src="https://m.media-amazon.com/images/I/71WHbylnDGL._AC_SX444_SY639_FMwebp_QL65_.jpg"
+                  src="data:image/jpeg;base64,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58AxKr46+E3FEmybNS4nc2nwMVUB/wByI/zFZFV9ztcebiKbelTZfos03hEWQef6u63aC8Got6NRx9KmJHV+gW000/By3o1Kb+4vf3T0jKvvC202E2fVrJ/eGyIfzWc5Q3q1PiBFg85+TZHZWAVlLKy2XzlJBzWFjYidjtqC/WYADrakAcBrwHdy7Jwrut1ZQw01uxLM19WJtoTOjNJLGXUrA6AW8dQfEc5Ydl9OMXhqS0aBpU1FrsKYLuRzcsSDppoBoBa0qq+se/3TP2ZgGrP5OnTeq/YilyL82A0A7ybQQekejW2lxmGp4lVZQ3FWFirDQgHmL8COIkxIborSdcFh0dMjrTRWW4NiqheKkjUAGwOl5MypAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAIiIAiIgCIiAJFdIdkU8Vh3w9QEq4tpowI1DLf4QIBHhJWIB552vu0x1KplpqK6G9mQqjD01dhY+BI75HN0C2gP8s5/XpfU5npYifMg7BJsmzQHRfoBiKmKVcTRelQXrMSQM4HBFKsTcniRwAPO03Zs3ZtGkgpUUREHwVUKvjYcT3nWSLUlPIT6igaCLFn1FsLTlESCBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAEREAREQBERAP/Z"
                   class="h-auto w-full object-cover"
                   alt="imageNotFound"
                 />
@@ -329,5 +367,6 @@
       </div>
     </main>
     <script type="module" src="../js/registrarProducto.mjs"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>

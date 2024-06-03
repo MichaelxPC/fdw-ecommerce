@@ -29,7 +29,7 @@ main {
 }
 
 .base-home {
-  height: 100vh;
+  height: fit-content;
   width: calc(100% - 10rem);
 }
 
@@ -105,7 +105,7 @@ li:hover {
 
 .input-price-form {
   height: 4rem;
-  width: 28rem;
+  width: 28rrem;
   border: 2px solid #dddddd;
   margin-top: 0.2rem;
   padding: 0.5rem;
@@ -113,6 +113,11 @@ li:hover {
   font-size: medium;
   font-weight: 600;
   outline-color: #22c55e;
+}
+
+.div-feeds {
+  height: 2rem;
+  width: 26rem;
 }
 
 .input-feeds-form {
@@ -139,7 +144,7 @@ li:hover {
   outline-color: #eab357;
 }
 
-.input-delivery-form {
+.input-sells-form {
   height: 4rem;
   width: 10rem;
   border: 2px solid #dddddd;
@@ -148,7 +153,19 @@ li:hover {
   border-radius: 1.2rem;
   font-size: medium;
   font-weight: 600;
-  outline-color: #eab357;
+  outline-color: #5b91f0;
+}
+
+.input-delivery-form {
+  height: 4rem;
+  width: 10rem;
+  border: 2px solid #5b91f0;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 1.2rem;
+  font-size: medium;
+  font-weight: 600;
+  outline-color: #5b91f0;
 }
 
 .input-deliveryprice-form {
@@ -160,7 +177,7 @@ li:hover {
   border-radius: 1.2rem;
   font-size: medium;
   font-weight: 600;
-  outline-color: #22c55e;
+  outline-color: #dddddd;
 }
 
 .candado-div-form {
@@ -255,13 +272,13 @@ li:hover {
 
 .container {
   height: 100%;
-  width: 98%;
+  width: 100%;
 }
 
 /* Filtros */
 
 .product-container {
-  width: 92%;
+  width: 84%;
 }
 
 .searchInput {
@@ -274,9 +291,10 @@ li:hover {
 .product-card {
   height: 40rem;
 }
+
 .filtros {
-  height: 24rem;
-  width: 22rem;
+  height: 27rem;
+  width: 25rem;
 }
 
 .paginacion {
@@ -313,18 +331,61 @@ li:hover {
   outline: 0;
 }
 
+.button-limpiar {
+  height: 4rem;
+  width: 12rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: large;
+  padding: 0.8rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Roboto", sans-serif;
+  border-radius: 6px;
+  border: none;
+
+  color: #fff;
+  background: linear-gradient(180deg, #f7994b 0%, #f7994b 100%);
+  background-origin: border-box;
+  box-shadow: 0px 0.5px 1.5px rgba(163, 87, 12, 0.732),
+    inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-limpiar:hover,
+.button-limpiar:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button-limpiar:hover {
+  transform: translateY(-1px);
+}
+
+.button-limpiar:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
+
 /* Indicaciones */
 
 .container-indicaciones {
-  height: 32rem;
-  width: 120rem;
+  height: 12rem;
+  width: 70%;
   margin-top: 2rem;
   margin-left: 2rem;
 }
 
-.container-indicaciones div span {
-  height: 10rem;
-  width: 50rem;
+.image-info {
+  height: auto;
+  width: 100%;
+}
+
+.image-info img {
+  height: 40rem;
+  width: 40rem;
 }
 
 .container-indicaciones div img {
@@ -347,7 +408,12 @@ li:hover {
   width: 25rem;
 }
 
-/* HTML: <div class="loader"></div> */
+.loaderDivTablas {
+  margin-left: 12rem;
+  height: 80rem;
+  width: 83%;
+}
+
 .loader {
   --r1: 154%;
   --r2: 68.5%;

@@ -1,10 +1,5 @@
 import { agregarProducto } from "../localStorage/localStorage.mjs";
 
-const mainContainer = document.getElementById("main-container");
-const navbar = document.getElementById("nav-bar");
-const navItems = document.getElementsByClassName("nav-items");
-const switchNav = document.getElementById("switch-navbar");
-
 // vars
 let formProduct = document.getElementById("productForm");
 let domicilioProduct = document.getElementById("domicilioProducto");
@@ -15,7 +10,6 @@ let candandoOpen = false;
 let imageProductUrl = document.getElementById("imageProductUrl");
 let imageSelectProduct = document.getElementById("imageSelectProduct");
 let imageProductHTML = document.getElementById("imageProduct");
-let buttonVaciar = document.getElementById("buttonCampos");
 
 const buscarImagenSelect = (nombre) => {
   switch (nombre) {
@@ -100,7 +94,7 @@ formProduct.addEventListener("submit", (e) => {
     product_num_ratings: feedsProduct.value,
     product_photo: imageProduct,
     climate_pledge_friendly: ecoRes,
-    sales_volume: ventasProduct.value,
+    sales_volume: parseInt(ventasProduct.value),
     delivery: domicilio,
   };
 
@@ -173,12 +167,4 @@ buttonCampos.addEventListener("click", () => {
   starProduct.value = "";
   ventasProduct.value = "";
   domicilioPrecioProduct.value = "";
-});
-
-switchNav.addEventListener("click", () => {
-  navbar.classList.toggle("close");
-  mainContainer.classList.toggle("home");
-  for (let i = 0; i < navItems.length; i++) {
-    navItems[i].classList.toggle("close-text");
-  }
 });

@@ -73,7 +73,7 @@ const llenarCards = async () => {
     );
     let title = document.createElement("span");
     title.classList.add("font-bold", "text-2xl", "truncate");
-    title.innerHTML = element.product_title;
+    title.innerHTML = `${element.product_title.slice(0, 19)}...`;
     titleDiv.appendChild(title);
 
     // Imagen del producto (div)
@@ -356,4 +356,9 @@ switchNav.addEventListener("click", () => {
   for (let i = 0; i < navItems.length; i++) {
     navItems[i].classList.toggle("close-text");
   }
+});
+
+botonLimpiar.addEventListener("click", () => {
+  limpiarCampos();
+  slideValue.innerHTML = `$0`;
 });

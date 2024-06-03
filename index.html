@@ -10,10 +10,14 @@
   <body>
     <main
       id="main-container"
-      class="base-home h-screen w-full flex flex-col bg-principal-bg"
+      class="base-home h-screen w-full flex flex-col bg-white"
     >
       <section class="flex justify-center items-center w-full bg-white h-16">
-        <h1 class="text-5xl font-bold text-primary-blue">Manual de usuario</h1>
+        <div class="flex justify-center bg-primary-blue rounded-2xl">
+          <div class="flex justify-center bg-primary-blue rounded-2xl mt-10">
+            <h3 class="font-bold text-white text-4xl p-4">Manual de usuario</h3>
+          </div>
+        </div>
       </section>
       <!-- NavBar Aside -->
       <nav
@@ -116,6 +120,39 @@
               >
             </a>
           </li>
+          <li
+            class="flex h-32 w-full justify-center items-center border-b-2 border-ligh-gray cursor-pointer hover:bg-primary-blue"
+          >
+            <a href="./src/views/tablas.html" class="flex items-center">
+              <svg
+                viewBox="0 0 24.00 24.00"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#ffffff"
+                class="h-14 w-14 navbar-icons"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M9 4L9 20M15 4L15 20M3 9H21M3 15H21M6.2 20H17.8C18.9201 20 19.4802 20 19.908 19.782C20.2843 19.5903 20.5903 19.2843 20.782 18.908C21 18.4802 21 17.9201 21 16.8V7.2C21 6.0799 21 5.51984 20.782 5.09202C20.5903 4.71569 20.2843 4.40973 19.908 4.21799C19.4802 4 18.9201 4 17.8 4H6.2C5.07989 4 4.51984 4 4.09202 4.21799C3.71569 4.40973 3.40973 4.71569 3.21799 5.09202C3 5.51984 3 6.07989 3 7.2V16.8C3 17.9201 3 18.4802 3.21799 18.908C3.40973 19.2843 3.71569 19.5903 4.09202 19.782C4.51984 20 5.07989 20 6.2 20Z"
+                    stroke="#ffffff"
+                    stroke-width="0.4800000000000001"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+              <span
+                class="nav-items close-text text-3xl text-text-color font-medium"
+                >Tablas</span
+              >
+            </a>
+          </li>
 
           <!-- User Section -->
           <!-- <li
@@ -129,43 +166,71 @@
           </li> -->
         </ul>
       </nav>
-      <section class="flex flex-col justify-center">
-        <article class="container-indicaciones">
-          <span class="text-4xl font-semibold text-primary-blue"
-            >¿Como registrar un producto?</span
-          >
-          <div class="flex">
-            <span class="text-2xl font-medium">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-              qui explicabo perspiciatis eius cumque voluptate id blanditiis
-              hic, officia, impedit eos nesciunt minima beatae aliquam corporis
-              totam ex amet vel? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Sequi omnis ipsam voluptatum molestiae nobis
-              necessitatibus minima placeat incidunt facere quod! Suscipit
-              perferendis atque libero repellendus harum vitae sapiente
-              quibusdam. Saepe!
-            </span>
-            <img src="./src/imgs/ImagenUnoInd.png" alt="image" class="" />
+      <section class="flex flex-col justify-center w-full mt-10 mb-5">
+        <span class="text-6xl font-semibold text-primary-blue"
+          >¿Como registrar un producto?</span
+        >
+        <article class="container-indicaciones w-full">
+          <div class="flex justify-between w-full mt-10">
+            <div class="flex flex-col">
+              <span class="text-4xl font-bold h-12">1. Paso</span>
+              <span class="text-2xl font-medium mt-2"
+                >Iremos la seccion de registrar producto, en la barra lateral
+                izquierda tendremos la opcion de desplegar el menu desde el
+                boton desplegar, o podremos clickear directamente el boton de la
+                seccion. El menu despegable esta diseñado para usuarios nuevos y
+                el menu natural para los usuarios ya experimentados que tienen
+                conocimiento del funcionamiento del programa.
+              </span>
+            </div>
           </div>
         </article>
-        <article class="container-indicaciones">
-          <span class="text-4xl font-semibold text-primary-blue"
-            >¿Como ver los productos?</span
-          >
-          <div class="flex">
-            <span class="text-2xl font-medium">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-              qui explicabo perspiciatis eius cumque voluptate id blanditiis
-              hic, officia, impedit eos nesciunt minima beatae aliquam corporis
-              totam ex amet vel? Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Sequi omnis ipsam voluptatum molestiae nobis
-              necessitatibus minima placeat incidunt facere quod! Suscipit
-              perferendis atque libero repellendus harum vitae sapiente
-              quibusdam. Saepe!
-            </span>
-            <img src="./src/imgs/ImagenUnoInd.png" alt="image" class="" />
+        <div class="image-info flex justify-center items-center">
+          <img
+            class="object-cover"
+            src="./src/imgs/barImage.png"
+            alt="bar-image"
+          />
+        </div>
+        <article class="container-indicaciones w-full">
+          <div class="flex justify-between w-full mt-10">
+            <div class="flex flex-col">
+              <span class="text-4xl font-bold h-12">2. Paso</span>
+              <span class="text-2xl font-medium mt-2"
+                >Digitaremos los datos del producto a crear, los requisitos
+                necesarios son: codigo, nombre de producto, categoria de entre:
+                computador, monitor, celular, tablet, accesorio; precio en USD
+                (dolares), numero de feeds, numero de estrellas, si es
+                ecofriendly con la siguientes opciones; si o no. ventas en el
+                mes y informacion del domicilio. Por ultimo añadiremos una
+                imagen al producto, donde podemos escoger las que el sistema nos
+                ofrece, o podemos seleccionar nuestra propia url de imagen.
+              </span>
+            </div>
           </div>
         </article>
+        <div class="image-info flex justify-center items-center">
+          <img class="object-cover" src="./src/imgs/fdm.JPG" alt="bar-image" />
+        </div>
+        <article class="container-indicaciones">
+          <span class="text-6xl font-semibold text-primary-blue"
+            >¡Ahora registra tu producto!</span
+          >
+          <div class="flex">
+            <span class="text-2xl font-medium mt-4">
+              En la seccion productos y tablas podras visualizar tus productos
+              creados, asegurate de digitar bien los formularios para evitar
+              errores inesperados en la visualizacion de tus productos.
+            </span>
+          </div>
+        </article>
+        <div class="image-info flex justify-center items-center">
+          <img
+            class="object-cover"
+            src="./src/imgs/productos.JPG"
+            alt="bar-image"
+          />
+        </div>
       </section>
     </main>
     <script src="./src/js/main.js"></script>

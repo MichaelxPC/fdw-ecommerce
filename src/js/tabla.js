@@ -1,6 +1,7 @@
 import { obtenerProductos } from "../localStorage/localStorage.mjs";
 
 // vars
+let onQuest = false;
 let data;
 let cuerpoTabla = document.getElementById("cuerpo-tabla");
 let loaderMainDiv = document.getElementById("loaderDiv");
@@ -10,22 +11,26 @@ let searchInput = document.getElementById("searchInput");
 let categoriaProducto = document.getElementById("categoriaProducto");
 
 let slideValue = document.getElementById("slideValue");
+let productsTable = document.getElementById("products-table");
 let slideProducto = document.getElementById("precioProductoSlide");
+let botonLimpiar = document.getElementById("button-limpiar");
 let buttonFiltrar = document.getElementById("filtrar-button");
 
 // Items
 const tablaItemsPromesa = async () => {
   return new Promise((resolve, reject) => {
     sectionPaginacion.classList.add("hidden");
+    productsTable.classList.add("hidden");
     let loaderDiv = document.createElement("div");
     loaderDiv.classList.add("loader", "cursor-none");
-    loaderMainDiv.classList.add("loaderDiv");
+    loaderMainDiv.classList.add("loaderDivTablas");
     loaderMainDiv.appendChild(loaderDiv);
     setTimeout(() => {
       try {
         loaderMainDiv.removeChild(loaderDiv);
-        loaderMainDiv.classList.remove("loaderDiv");
+        loaderMainDiv.classList.remove("loaderDivTablas");
         sectionPaginacion.classList.remove("hidden");
+        productsTable.classList.remove("hidden");
         resolve("exito");
       } catch (error) {
         reject(error);
@@ -38,7 +43,7 @@ const llenarItems = () => {
   while (cuerpoTabla.firstChild) {
     cuerpoTabla.removeChild(cuerpoTabla.firstChild);
   }
-  for (let index = 15 * iterator - 15; index < 15 * iterator; index++) {
+  for (let index = 10 * iterator - 10; index < 10 * iterator; index++) {
     const element = data[index];
     if (element == undefined) {
       return;
@@ -48,6 +53,11 @@ const llenarItems = () => {
     codigoProduct.innerHTML = element.code;
     let nombreProduct = document.createElement("th");
     nombreProduct.innerHTML = `${element.product_title.slice(0, 19)}...`;
+    let imageProductCell = document.createElement("th");
+    let imageProduct = document.createElement("img");
+    imageProduct.classList.add("h-28", "h-28", "object-cover");
+    imageProduct.src = element.product_photo;
+    imageProductCell.append(imageProduct);
     let categoriaProducto = document.createElement("th");
     categoriaProducto.innerHTML = element.categorie;
     let precioProducto = document.createElement("th");
@@ -58,7 +68,7 @@ const llenarItems = () => {
     starsProduct.innerHTML = element.product_star_rating;
     let ecoProduct = document.createElement("th");
     let ecofriendly = "No";
-    if (ecoProduct.climate_pledge_friendly) {
+    if (element.climate_pledge_friendly == true) {
       ecofriendly = "Si";
     }
     ecoProduct.innerHTML = ecofriendly;
@@ -68,6 +78,7 @@ const llenarItems = () => {
     trRow.append(
       codigoProduct,
       nombreProduct,
+      imageProductCell,
       categoriaProducto,
       precioProducto,
       feedsProduct,
@@ -106,7 +117,7 @@ const llenarPaginacion = async () => {
   );
   let itemsPagination = 1;
   for (let index = 0; index < data.length; index++) {
-    if (15 * itemsPagination < index) {
+    if (10 * itemsPagination < index) {
       itemsPagination += 1;
     }
   }
@@ -169,6 +180,7 @@ const rellenarFiltrados = async (dataFiltro) => {
   data = dataFiltro;
   await promesaItem();
   await llenarPaginacion();
+  onQuest = false;
 };
 
 slideProducto.oninput = () => {
@@ -177,10 +189,14 @@ slideProducto.oninput = () => {
 };
 
 buttonFiltrar.addEventListener("click", () => {
+  if (onQuest == true) {
+    return;
+  }
   filtrarProductos();
 });
 
 const filtrarProductos = async () => {
+  onQuest = true;
   data = await obtenerProductos();
   let filterProducts = data.filter((product) => {
     const searchContent = searchInput.value.toLocaleLowerCase();
@@ -203,3 +219,14 @@ const filtrarProductos = async () => {
   }
   rellenarFiltrados(temporalData);
 };
+
+const limpiarCampos = () => {
+  searchInput.value = "";
+  slideProducto.value = 0;
+  categoriaProducto.value = "";
+};
+
+botonLimpiar.addEventListener("click", () => {
+  limpiarCampos();
+  slideValue.innerHTML = `$0`;
+});
